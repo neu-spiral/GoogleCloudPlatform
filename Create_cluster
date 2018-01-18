@@ -1,0 +1,2 @@
+#! /bin/bash
+gcloud dataproc clusters create foo  --num-workers=8  --worker-machine-type=n1-standard-64  --master-machine-type=n1-standard-1   --initialization-actions gs://dataproc-initialization-actions/conda/bootstrap-conda.sh,gs://dataproc-initialization-actions/conda/install-conda-env.sh,gs://armin-bucket/install_cvxopt.sh  --metadata=MINICONDA_VARIANT=2  
